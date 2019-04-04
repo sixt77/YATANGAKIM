@@ -1,0 +1,23 @@
+.map{
+    width: 150px;
+}
+
+.map_line{
+    width: 250px;
+    float: left;
+}
+.map_case{
+    width: 25px;
+    height: 25px;
+    float: left;
+}
+.free_case{
+    background-color: green;
+}
+.pnj_case{
+    background-color: yellow;
+}
+
+.disable_case{
+    background-color: blue;
+}
