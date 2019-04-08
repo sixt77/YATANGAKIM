@@ -56,35 +56,35 @@ function set_html_value($id, $value) {
 function init_map() {
     var map = [
         ["x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x"],
-        ["x", "v", "v", "v", "v", "3", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "x"],
-        ["x", "v", "1", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "x"],
-        ["x", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "x"],
-        ["x", "v", "2", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "x"],
-        ["x", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "x"],
-        ["x", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "x"],
-        ["x", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "x"],
-        ["x", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "x"],
-        ["x", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "x"],
-        ["x", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "x"],
-        ["x", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "x"],
-        ["x", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "x"],
-        ["x", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "x"],
-        ["x", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "x"],
-        ["x", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "x"],
-        ["x", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "x"],
-        ["x", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "x"],
-        ["x", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "x"],
-        ["x", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "x"],
-        ["x", "v", "v", "v", "5", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "4", "v", "v", "v", "v", "v", "x"],
-        ["x", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "x"],
-        ["x", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "x"],
-        ["x", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "x"],
-        ["x", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "x"],
-        ["x", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "x"],
-        ["x", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "x"],
-        ["x", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "x"],
-        ["x", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "x"],
-        ["x", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "x"],
+        ["x", "v", "x", "x", "x", "x", "v", "x", "x", "x", "x", "v", "x", "x", "x", "v", "v", "v", "x", "x", "v", "v", "v", "x", "v", "v", "v", "x", "v", "x"],
+        ["x", "v", "v", "x", "x", "x", "v", "v", "v", "v", "v", "v", "v", "x", "v", "v", "x", "v", "v", "v", "v", "x", "v", "x", "v", "x", "v", "x", "v", "x"],
+        ["x", "x", "v", "1", "2", "3", "v", "x", "x", "x", "x", "x", "v", "v", "v", "x", "x", "v", "x", "x", "x", "x", "v", "v", "v", "x", "v", "v", "v", "x"],
+        ["x", "x", "x", "v", "x", "4", "x", "x", "x", "v", "x", "x", "x", "x", "x", "x", "v", "v", "x", "x", "x", "x", "x", "x", "x", "x", "x", "v", "x", "x"],
+        ["x", "v", "v", "v", "x", "5", "x", "x", "v", "v", "v", "v", "v", "x", "v", "v", "v", "x", "x", "x", "x", "x", "x", "v", "v", "x", "x", "v", "x", "x"],
+        ["x", "x", "x", "v", "x", "v", "x", "v", "v", "x", "x", "x", "v", "x", "v", "x", "x", "x", "v", "v", "v", "v", "v", "v", "x", "x", "x", "v", "v", "x"],
+        ["x", "v", "v", "v", "x", "v", "x", "v", "x", "x", "x", "x", "x", "x", "v", "x", "x", "x", "v", "x", "x", "x", "x", "v", "x", "v", "v", "v", "x", "x"],
+        ["x", "x", "v", "x", "x", "v", "v", "v", "x", "x", "x", "x", "x", "x", "v", "x", "x", "v", "v", "v", "v", "v", "x", "v", "x", "v", "x", "v", "x", "x"],
+        ["x", "v", "v", "x", "x", "v", "x", "v", "x", "v", "v", "v", "v", "v", "v", "x", "x", "x", "v", "x", "x", "v", "x", "v", "x", "v", "x", "v", "v", "x"],
+        ["x", "v", "x", "x", "x", "v", "x", "v", "v", "v", "x", "v", "x", "x", "v", "x", "x", "x", "v", "x", "x", "v", "v", "v", "x", "v", "x", "x", "v", "x"],
+        ["x", "v", "v", "v", "v", "v", "x", "x", "v", "x", "x", "v", "x", "x", "v", "v", "v", "v", "v", "x", "x", "x", "x", "x", "x", "v", "x", "x", "v", "x"],
+        ["x", "x", "v", "x", "x", "v", "x", "x", "v", "x", "x", "v", "v", "x", "v", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "v", "x", "v", "v", "x"],
+        ["x", "x", "v", "x", "x", "v", "x", "x", "v", "x", "x", "x", "x", "x", "v", "x", "x", "x", "v", "v", "v", "v", "v", "x", "v", "v", "x", "v", "x", "x"],
+        ["x", "x", "v", "x", "x", "v", "x", "x", "v", "x", "x", "x", "x", "x", "v", "x", "x", "x", "v", "x", "v", "x", "x", "v", "v", "x", "x", "v", "x", "x"],
+        ["x", "v", "v", "x", "x", "v", "x", "v", "v", "v", "v", "v", "v", "x", "v", "x", "v", "v", "v", "x", "v", "x", "x", "v", "x", "x", "v", "v", "v", "x"],
+        ["x", "v", "x", "x", "v", "v", "x", "x", "v", "x", "v", "x", "v", "v", "v", "x", "v", "x", "x", "v", "v", "x", "x", "v", "v", "v", "v", "x", "v", "x"],
+        ["x", "v", "x", "x", "v", "x", "x", "x", "x", "x", "v", "x", "x", "x", "x", "x", "v", "x", "x", "x", "v", "v", "x", "x", "x", "x", "x", "x", "v", "x"],
+        ["x", "v", "x", "x", "v", "x", "v", "x", "v", "x", "v", "v", "v", "x", "v", "v", "v", "v", "v", "x", "x", "v", "x", "v", "v", "v", "v", "x", "v", "x"],
+        ["x", "v", "v", "x", "v", "x", "v", "v", "v", "v", "v", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "v", "x", "v", "x", "x", "v", "x", "v", "x"],
+        ["x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "v", "v", "v", "v", "x", "v", "v", "v", "x", "v", "x", "v", "x", "x", "x", "x", "v", "x"],
+        ["x", "v", "v", "v", "v", "x", "x", "x", "v", "v", "v", "x", "x", "v", "x", "v", "x", "v", "x", "v", "v", "v", "x", "v", "v", "v", "x", "x", "v", "x"],
+        ["x", "x", "v", "x", "v", "v", "v", "v", "v", "x", "v", "x", "x", "v", "x", "v", "x", "v", "x", "x", "x", "x", "x", "v", "x", "v", "v", "x", "v", "x"],
+        ["x", "x", "v", "x", "x", "x", "x", "x", "v", "x", "x", "x", "x", "v", "x", "v", "x", "v", "v", "x", "x", "x", "v", "v", "v", "x", "v", "x", "v", "x"],
+        ["x", "x", "v", "x", "x", "x", "v", "x", "v", "v", "x", "x", "x", "v", "x", "v", "x", "x", "v", "v", "v", "v", "v", "x", "x", "x", "v", "x", "v", "x"],
+        ["x", "x", "v", "v", "v", "v", "v", "x", "x", "v", "v", "v", "v", "v", "x", "v", "x", "x", "x", "v", "x", "x", "x", "x", "v", "v", "v", "v", "v", "x"],
+        ["x", "x", "v", "x", "v", "x", "x", "x", "x", "x", "x", "v", "x", "v", "x", "v", "v", "v", "x", "v", "x", "x", "x", "x", "v", "x", "x", "x", "v", "x"],
+        ["x", "v", "v", "x", "v", "x", "x", "v", "v", "v", "x", "x", "x", "v", "x", "x", "x", "v", "x", "x", "x", "x", "v", "x", "v", "x", "x", "x", "v", "x"],
+        ["x", "x", "v", "x", "v", "x", "x", "v", "x", "v", "x", "v", "v", "v", "x", "x", "x", "v", "v", "x", "v", "v", "v", "v", "v", "v", "v", "x", "v", "x"],
+        ["x", "x", "v", "x", "v", "v", "v", "v", "x", "v", "v", "v", "x", "v", "v", "v", "x", "x", "v", "v", "v", "x", "x", "x", "x", "x", "v", "v", "v", "x"],
         ["x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x"]
     ];
     console.log(map);
@@ -170,11 +170,11 @@ function check_case(player_position, x, y, limit, map) {
 }
 
 function draw_player(player_position) {
-    document.getElementById('case_' + player_position[0] + '_' + player_position[1]).innerHTML = 'p';
+    document.getElementById('case_' + player_position[0] + '_' + player_position[1]).classList.add("caract_principal");
 }
 
 function spawn_player(x, y) {
-    document.getElementById('case_' + x + '_' + y).innerHTML = 'p';
+    document.getElementById('case_' + x + '_' + y).classList.add("caract_principal");;
 }
 
 function draw_view(map, x, y, height, width, limit, id) {
@@ -217,22 +217,22 @@ function draw_view(map, x, y, height, width, limit, id) {
                     document.getElementById('line_' + i).appendChild(create_element('div', 'case_' + viewX + '_' + viewY, 'map_case map_element disable_case', '', ''));
                     break;
                 case '1':
-                    document.getElementById('line_' + i).appendChild(create_element('div', 'case_' + viewX + '_' + viewY, 'map_case map_element pnj_case', '', '1'));
+                    document.getElementById('line_' + i).appendChild(create_element('div', 'case_' + viewX + '_' + viewY, 'map_case map_element pnj_case caract_pnj1', '', '1'));
                     break;
                 case '2':
-                    document.getElementById('line_' + i).appendChild(create_element('div', 'case_' + viewX + '_' + viewY, 'map_case map_element pnj_case', '', '2'));
+                    document.getElementById('line_' + i).appendChild(create_element('div', 'case_' + viewX + '_' + viewY, 'map_case map_element pnj_case caract_pnj2', '', '2'));
                     break;
                 case '3':
-                    document.getElementById('line_' + i).appendChild(create_element('div', 'case_' + viewX + '_' + viewY, 'map_case map_element pnj_case', '', '3'));
+                    document.getElementById('line_' + i).appendChild(create_element('div', 'case_' + viewX + '_' + viewY, 'map_case map_element pnj_case caract_pnj3', '', '3'));
                     break;
                 case '4':
-                    document.getElementById('line_' + i).appendChild(create_element('div', 'case_' + viewX + '_' + viewY, 'map_case map_element pnj_case', '', '4'));
+                    document.getElementById('line_' + i).appendChild(create_element('div', 'case_' + viewX + '_' + viewY, 'map_case map_element pnj_case caract_pnj4', '', '4'));
                     break;
                 case '5':
-                    document.getElementById('line_' + i).appendChild(create_element('div', 'case_' + viewX + '_' + viewY, 'map_case map_element pnj_case', '', '5'));
+                    document.getElementById('line_' + i).appendChild(create_element('div', 'case_' + viewX + '_' + viewY, 'map_case map_element pnj_case caract_pnj5', '', '5'));
                     break;
                 case '7':
-                    document.getElementById('line_' + i).appendChild(create_element('div', 'case_' + viewX + '_' + viewY, 'map_case map_element pnj_case', '', '7'));
+                    document.getElementById('line_' + i).appendChild(create_element('div', 'case_' + viewX + '_' + viewY, 'map_case map_element pnj_case caract_pnj7', '', '7'));
                     break;
             }
             viewY++;
@@ -256,7 +256,7 @@ function remove_npc(id){
 
 function pnj_one_dialog(id) {
     clear_dialog();
-    document.getElementById(id).appendChild(create_element('div', '', 'simple_dialog text_dialog', '', 'tu veux devenir mon amis ?'));
+    document.getElementById(id).appendChild(create_element('div', '', 'simple_dialog text_dialog', '', 'Veux-tu devenir mon ami ? Veux-tu devenir mon ami ? Veux-tu devenir mon ami ? Veux-tu devenir mon ami ? '));
     document.getElementById(id).appendChild(create_element('div', '', 'simple_dialog button button_left', 'pnj_one(true)', 'oui ! '));
     document.getElementById(id).appendChild(create_element('div', '', 'simple_dialog button button_right', "pnj_one(false);", 'pas question !'));
 }
@@ -285,7 +285,7 @@ function pnj_three_dialog(id) {
 function pnj_three_dialog2(id) {
     clear_dialog();
     document.getElementById(id).appendChild(create_element('div', '', 'simple_dialog text_dialog', '', 'avant tu dois répondre a mon énigme : Il est toujours à l’est Et ne passera jamais à l’ouest. Il assiste à un lever Et jamais à un coucher. Qui est-ce ? '));
-    document.getElementById(id).appendChild(create_input('text', 'pnj_three_chat', 'simple_dialog', '', ''));
+    document.getElementById(id).appendChild(create_input('text', 'pnj_three_chat', 'simple_dialog input_dialog', '', ''));
     document.getElementById(id).appendChild(create_element('div', '', 'simple_dialog button button_left', 'pnj_three(document.getElementById("pnj_three_chat").value)', 'valider'));
     document.getElementById(id).appendChild(create_element('div', '', 'simple_dialog button button_right', "pnj_three(false);", 'donner sa langue au chat !'));
 }

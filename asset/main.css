@@ -26,7 +26,7 @@ header h1 {
 footer {
     width: 350px;
     float: right;
-    height: 200px;
+    height: 150px;
     background-color: #4469B0;
     border-top: 2px solid #000;
     padding: 15px;
@@ -49,7 +49,7 @@ footer {
 
 .scrolling {
     width: 350px;
-    height: calc(100vh - 300px);
+    height: calc(100vh - 250px);
     overflow-y: scroll;
     float: right;
 }
@@ -63,26 +63,26 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #E9EBEE;
+    background-color: #cbcdd0;
 }
 
 .container_dialog {
     width: 100%;
-    min-height: 150px;
-    height: calc((100% / 3) * 2);
+    height: calc(100% - 150px);
     border-bottom: 2px solid;
 }
 
 .container_firendlist {
     width: 100%;
-    min-height: 100px;
-    height: calc(100% / 2);
+    height: 150px;
 }
 
 
 .map {
-    width: 600px;
-    height: 600px;
+    width: 604px;
+    height: 604px;
+    border: 2px solid #000;
+    border-radius: 3px;
 }
 
 .map_line {
@@ -97,29 +97,43 @@ footer {
 }
 
 .free_case {
-    background-color: green;
+    background-color: #F1F0F0;
 }
 
 .pnj_case {
-    background-color: yellow;
+    background-color: #F1F0F0;
 }
 
 .disable_case {
-    background-color: blue;
+    background-color: #4469B0;
 }
 
 .dialog {
     width: 100%;
     height: 100%;
+    padding: 15px 10px;
     position: relative;
 }
 
+.dialog h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.input_dialog {
+    margin: 20px auto;
+    padding: 0 10px;
+    display: block;
+    height: 30px;
+    font-size: 18px;
+}
+
 .text_dialog {
-    margin: 25px;
     padding: 10px 15px;
     font-size: 20px;
     border-radius: 20px 20px 20px 4px;
     background-color: #F1F0F0;
+    margin-bottom: 15px;
 }
 
 .button {
@@ -128,12 +142,13 @@ footer {
     height: 43px;
     justify-content: center;
     align-items: center;
-    padding: 2px;
-    font-size: 20px;
+    text-align: center;
+    padding: 5px 20px;
+    font-size: 16px;
     cursor: pointer;
     color: #fff;
     position: absolute;
-    bottom: 10px;
+    bottom: 12px;
     border-radius: 4px;
     box-shadow: 0 5px 0 #43559b;
     background-color: #4469B0;
@@ -179,12 +194,18 @@ footer {
     width: 100%;
     height: 100%;
     padding: 15px;
+    display: flex;
+    flex-wrap: wrap;
 }
+
+.friendlist h2 {width: 100%;height: 30px;display: block;line-height: 30px;font-size: 20px;}
 
 .friend {
     height: 30px;
     line-height: 30px;
-    font-size: 25px;
+    font-size: 20px;
+    float: left;
+    width: 50%;
 }
 
 .friend::before {
@@ -192,4 +213,32 @@ footer {
     font-size: 25px;
     height: auto;
     margin-right: 10px;
+}
+
+.caract_principal {
+    background-image: url("img/principal/perso.png");
+}
+
+.caract_pnj1 {
+    background-image: url("img/pnj/pnj1.png");
+}
+
+.caract_pnj2 {
+    background-image: url("img/pnj/pnj2.png");
+}
+
+.caract_pnj3 {
+    background-image: url("img/pnj/pnj3.png");
+}
+
+.caract_pnj4 {
+    background-image: url("img/pnj/pnj4.png");
+}
+
+.caract_pnj5 {
+    background-image: url("img/pnj/pnj5.png");
+}
+
+.caract_pnj7 {
+    background-image: url("img/pnj/pnj7.png");
 }
