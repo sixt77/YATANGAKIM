@@ -53,27 +53,72 @@ function set_html_value($id, $value){
 }
 
 function init_map(){
-    var map = [["v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v"],
-        ["v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v"],
-        ["v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v"],
-        ["v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v"],
-        ["v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v"],
-        ["v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v"],
-        ["v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "x", "x", "x", "v", "v"],
-        ["v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "x", "v", "v", "v"],
-        ["v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "x", "v", "v", "v"],
-        ["v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "x", "v", "v", "v"],
-        ["v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v"],
-        ["v", "v", "v", "v", "v", "v", "v", "v", "v","v", "x", "x", "v", "v", "v", "v", "v", "v"],
-        ["v", "v", "v", "v", "v", "v", "v", "v", "x","v", "x", "1", "v", "v", "v", "v", "v", "v"],
-        ["v", "v", "x", "v", "v", "v", "v", "v", "x","x", "x", "x", "x", "v", "v", "v", "v", "v"],
-        ["v", "v", "x", "v", "v", "v", "v", "v", "v","v", "x", "v", "x", "v", "v", "v", "v", "v"],
-        ["v", "v", "x", "v", "v", "v", "v", "v", "v","x", "x", "v", "v", "v", "v", "v", "v", "v"],
-        ["v", "x", "x", "x", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v"],
-        ["v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v"]];
+    var map = [["v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v"],
+        ["v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v"],
+        ["v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v"],
+        ["v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "3", "v", "v"],
+        ["v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v"],
+        ["v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v"],
+        ["v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v"],
+        ["v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v"],
+        ["v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v"],
+        ["v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v"],
+        ["v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v"],
+        ["v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v"],
+        ["v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v"],
+        ["v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v"],
+        ["v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v"],
+        ["v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v"],
+        ["v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v"],
+        ["v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v"],
+        ["v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "1", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v"],
+        ["v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v"],
+        ["v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v"],
+        ["v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v"],
+        ["v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v"],
+        ["v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v"],
+        ["v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v"],
+        ["v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v"],
+        ["v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v"],
+        ["v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v"],
+        ["v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v"],
+        ["v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v"],
+        ["v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v"],
+        ["v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v"],
+        ["v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v"],
+        ["v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v"],
+        ["v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v"],
+        ["v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v"],
+        ["v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v"],
+        ["v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v"],
+        ["v", "v", "v", "v", "4", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "5", "v", "v", "v", "v", "v", "v"],
+        ["v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v"],
+        ["v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v"],
+        ["v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v"],
+        ["v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v"],
+        ["v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v"],
+        ["v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v"],
+        ["v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v"],
+        ["v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v"],
+        ["v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v"],
+        ["v", "v", "v", "v", "v", "2", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v"],
+        ["v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v"],
+        ["v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v"],
+        ["v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "1", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "v","v", "v", "v", "v", "v", "v", "v", "v", "x"]];
     console.log(map);
 
     return map;
+}
+function find_npc(map){
+    var npc_position = [];
+    for (var i in map) {
+        for (var j in map[i]) {
+            if(map[i][j] != 'x' && map[i][j] != 'v'){
+                npc_position[map[i][j]] = [[i], [j]];
+            }
+        }
+    }
+    return npc_position;
 }
 
 function build_map(id, map, limit) {
@@ -108,8 +153,27 @@ function check_case(player_position, x, y, limit, map){
                 pnj_one_dialog('dialog');
                 player_position[2] = false;
                 return player_position;
-
-
+                break;
+            case '2':
+                pnj_two_dialog('dialog');
+                player_position[2] = false;
+                return player_position;
+                break;
+            case '3':
+                pnj_three_dialog('dialog');
+                player_position[2] = false;
+                return player_position;
+                break;
+            case '4':
+                pnj_three_dialog('dialog');
+                player_position[2] = false;
+                return player_position;
+                break;
+            case '5':
+                pnj_three_dialog('dialog');
+                player_position[2] = false;
+                return player_position;
+                break;
         }
     }else{
         return player_position;
@@ -151,6 +215,7 @@ function draw_view(map, x, y, height, width, limit, id){
     startY = y-Math.floor(height/2);
     viewX = x-Math.floor(width/2);
     viewY = y-Math.floor(height/2);
+
     //dessin de la vue
     while(i < height){
         document.getElementById(id).appendChild(create_element('div', 'line_'+i, 'map_line map_element', '', ''));
@@ -163,7 +228,22 @@ function draw_view(map, x, y, height, width, limit, id){
                     document.getElementById('line_'+i).appendChild(create_element('div', 'case_'+viewX+'_'+viewY, 'map_case map_element disable_case', '', ''));
                     break;
                 case '1':
-                    document.getElementById('line_'+i).appendChild(create_element('div', 'case_'+viewX+'_'+viewY, 'map_case map_element pnj_case', '', ''));
+                    document.getElementById('line_'+i).appendChild(create_element('div', 'case_'+viewX+'_'+viewY, 'map_case map_element pnj_case', '', '1'));
+                    break;
+                case '2':
+                    document.getElementById('line_'+i).appendChild(create_element('div', 'case_'+viewX+'_'+viewY, 'map_case map_element pnj_case', '', '2'));
+                    break;
+                case '3':
+                    document.getElementById('line_'+i).appendChild(create_element('div', 'case_'+viewX+'_'+viewY, 'map_case map_element pnj_case', '', '3'));
+                    break;
+                case '4':
+                    document.getElementById('line_'+i).appendChild(create_element('div', 'case_'+viewX+'_'+viewY, 'map_case map_element pnj_case', '', '4'));
+                    break;
+                case '5':
+                    document.getElementById('line_'+i).appendChild(create_element('div', 'case_'+viewX+'_'+viewY, 'map_case map_element pnj_case', '', '5'));
+                    break;
+                case '7':
+                    document.getElementById('line_'+i).appendChild(create_element('div', 'case_'+viewX+'_'+viewY, 'map_case map_element pnj_case', '', '7'));
                     break;
             }
             viewY++;
@@ -178,26 +258,109 @@ function draw_view(map, x, y, height, width, limit, id){
 
 function pnj_one_dialog(id){
     clear_dialog();
-    console.log(id);
-    document.getElementById(id).appendChild(create_element('div', '', 'simple_dialog', '','qui a la plus grosse teub du monde ?'));
-    document.getElementById(id).appendChild(create_element('div', '', 'simple_dialog', 'pnj_one(true)','issou'));
-    document.getElementById(id).appendChild(create_element('div', '', 'simple_dialog', "pnj_one(false);",'pas issou'));
+    document.getElementById(id).appendChild(create_element('div', '', 'simple_dialog', '','tu veux devenir mon amis ?'));
+    document.getElementById(id).appendChild(create_element('div', '', 'simple_dialog', 'pnj_one(true)','oui ! '));
+    document.getElementById(id).appendChild(create_element('div', '', 'simple_dialog', "pnj_one(false);",'pas question !'));
 }
 
+function pnj_two_dialog(id){
+    clear_dialog();
+    document.getElementById(id).appendChild(create_element('div', '', 'simple_dialog', '','tu veux devenir mon amis ?'));
+    document.getElementById(id).appendChild(create_element('div', '', 'simple_dialog', 'pnj_two_dialog2("dialog")','oui ! '));
+    document.getElementById(id).appendChild(create_element('div', '', 'simple_dialog', "pnj_two(false);",'pas question !'));
+}
+
+function pnj_two_dialog2(id){
+    clear_dialog();
+    document.getElementById(id).appendChild(create_element('div', '', 'simple_dialog', '','tu est vraiment sur ?'));
+    document.getElementById(id).appendChild(create_element('div', '', 'simple_dialog', 'pnj_two(true)','oui ! '));
+    document.getElementById(id).appendChild(create_element('div', '', 'simple_dialog', "pnj_two(false);",'pas question !'));
+}
+
+function pnj_three_dialog(id){
+    clear_dialog();
+    document.getElementById(id).appendChild(create_element('div', '', 'simple_dialog', '','tu veux devenir mon amis ?'));
+    document.getElementById(id).appendChild(create_element('div', '', 'simple_dialog', 'pnj_three_dialog2("dialog")','oui ! '));
+    document.getElementById(id).appendChild(create_element('div', '', 'simple_dialog', "pnj_three(false);",'pas question !'));
+}
+
+function pnj_three_dialog2(id){
+    clear_dialog();
+    document.getElementById(id).appendChild(create_element('div', '', 'simple_dialog', '','avant tu dois répondre a mon énigme : Il est toujours à l’est Et ne passera jamais à l’ouest. Il assiste à un lever Et jamais à un coucher. Qui est-ce ? '));
+    document.getElementById(id).appendChild(create_input('text', 'pnj_three_chat', 'simple_dialog', '', ''));
+    document.getElementById(id).appendChild(create_element('div', '', 'simple_dialog', 'pnj_three(document.getElementById("pnj_three_chat").value)','valider'));
+    document.getElementById(id).appendChild(create_element('div', '', 'simple_dialog', "pnj_three(false);",'donner sa langue au chat !'));
+}
 
 function pnj_one(value) {
     clear_dialog();
     ready = true;
     if(value){
-        document.getElementById('dialog').appendChild(create_element('div', '', 'simple_dialog', '','bonne réponse :D'));
-        document.getElementById('friendlist').appendChild(create_element('div', 'one', 'friend', '','bite'));
-
-        map[12][11] = 'v';
+        friendlist[1] = '1';
+        draw_friendList(friendlist);
+        map[npc_position[1][0]][npc_position[1][1]] = 'v';
     }else{
-        document.getElementById('dialog').appendChild(create_element('div', '', 'simple_dialog', '','ntm !'));
+        document.getElementById('dialog').appendChild(create_element('div', '', 'simple_dialog', '','dommage !'));
+    }
+}
+
+function pnj_two(value) {
+    clear_dialog();
+    ready = true;
+    if(value){
+        friendlist[2] = '2';
+        draw_friendList(friendlist);
+        map[npc_position[2][0]][npc_position[2][1]] = 'v';
+    }else{
+        document.getElementById('dialog').appendChild(create_element('div', '', 'simple_dialog', '','haha ! dommage pour toi, aller salut !'));
+        friendlist[1] = null;
+        draw_friendList(friendlist);
+        map[npc_position[2][0]][npc_position[2][1]] = 'v';
+        new_position = find_random_spot(map, limit);
+        console.log("new pos : "+new_position);
+        map[new_position[0]][new_position[1]] = '7';
+        npc_position = find_npc(map);
+    }
+}
+
+function pnj_three(value) {
+    console.log(value);
+    clear_dialog();
+    ready = true;
+    if(value === "orient" || value === "l'orient"){
+        friendlist[3] = '3';
+        draw_friendList(friendlist);
+        map[npc_position[3][0]][npc_position[3][1]] = 'v';
+    }else{
+        document.getElementById('dialog').appendChild(create_element('div', '', 'simple_dialog', '','perdu !'));
+        draw_friendList(friendlist);
     }
 }
 
 function clear_dialog() {
-    remove_class('simple_dialog');1
+    remove_class('simple_dialog');
+}
+
+function draw_friendList(friendlist) {
+    remove_class('friend');
+    for (var i in friendlist) {
+        if(friendlist[i] != null){
+            document.getElementById('friendlist').appendChild(create_element('div', '', 'friend', '', friendlist[i]));
+        }
+    }
+}
+
+function  find_random_spot(map, limit) {
+    var isfree = false;
+    var x = 0;
+    var y = 0;
+    while(!isfree){
+        x = Math.floor(Math.random() * (+limit[1] - +limit[0])) + +limit[0];
+        y = Math.floor(Math.random() * (+limit[3] - +limit[2])) + +limit[2];
+        if(map[x][y] == 'v'){
+            isfree = true;
+        }
+    }
+    position = [x, y];
+    return position;
 }

@@ -11,8 +11,10 @@
 
     <script> $( document ).ready(function() {
         player_position = [0, 0];
-        limit = [0, 171, 0, 17];
+        limit = [0, 51, 0, 35];
         map = init_map();
+        npc_position = find_npc(map);
+        friendlist =[];
         build_map('map', map, limit);
         ready =  true;
     });
@@ -25,19 +27,15 @@
                 switch (e.which) {
                     case 122:
                         player_position = player_moove(player_position, -1, 0, limit, map);
-                        console.log('top');
                         break;
                     case 115:
                         player_position = player_moove(player_position, 1, 0, limit, map);
-                        console.log('bot');
                         break;
                     case 113:
                         player_position = player_moove(player_position, 0, -1, limit, map);
-                        console.log('left');
                         break;
                     case 100:
                         player_position = player_moove(player_position, 0, 1, limit, map);
-                        console.log('right');
                         break;
 
                 }

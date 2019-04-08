@@ -1,14 +1,14 @@
 .map{
-    width: 150px;
+    width: 750px;
 }
 
 .map_line{
-    width: 250px;
+    width: 750px;
     float: left;
 }
 .map_case{
-    width: 25px;
-    height: 25px;
+    width: 75px;
+    height: 75px;
     float: left;
 }
 .free_case{
