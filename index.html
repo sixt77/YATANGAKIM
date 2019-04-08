@@ -2,27 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <title>Labyrinthe</title>
+    <script src="asset/jquery.js"></script>
     <script src="asset/controller.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="asset/reset.css">
     <link rel="stylesheet" type="text/css" href="asset/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
 
-    <script> $( document ).ready(function() {
-        player_position = [0, 0];
-        limit = [0, 51, 0, 35];
-        map = init_map();
-        npc_position = find_npc(map);
-        friendlist =[];
-        build_map('map', map, limit);
-        ready =  true;
-    });
+    <script src="asset/jquery-confirm.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            player_position = [1, 1];
+            limit = [0, 30, 0, 30];
+            map = init_map();
+            npc_position = find_npc(map);
+            friendlist = [];
+            build_map('map', map, limit);
+            ready = true;
+        });
 
 
-
-        $(document).keypress(function(e) {
-            if(ready) {
+        $(document).keypress(function (e) {
+            if (ready) {
                 ready = false;
                 switch (e.which) {
                     case 122:
@@ -43,10 +46,35 @@
             }
         });
     </script>
+
 </head>
+
 <body>
-<div id="map" class="map"></div>
-<div id="friendlist" class="friendlist"></div>
-<div id="dialog" class="dialog"></div>
+
+<div class="container_map">
+    <div id="map" class="map"></div>
+</div>
+
+<header>
+    <h1>Labyrinthe</h1>
+</header>
+
+<div class="scrolling">
+
+    <div class="container_dialog">
+        <div id="dialog" class="dialog"></div>
+    </div>
+
+    <div class="container_firendlist">
+        <div id="friendlist" class="friendlist"></div>
+    </div>
+
+</div>
+
+<footer>
+    <img class="img_zqsd" src="asset/img/zqsd.png" alt="">
+    <img class="img_spaceBar" src="asset/img/space_bar.png" alt="">
+</footer>
+
 </body>
 </html>
