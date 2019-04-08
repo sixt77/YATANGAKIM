@@ -244,10 +244,16 @@ function draw_view(map, x, y, height, width, limit, id) {
         i++;
     }
 }
+function remove_npc_dialog(id){
+    clear_dialog();
+    document.getElementById('dialog').appendChild(create_element('div', '', 'simple_dialog text_dialog', '', 'tu en es sur ?'));
+    document.getElementById('dialog').appendChild(create_element('div', '', 'simple_dialog text_dialog', 'remove_npc("'+id+'")', 'oui !'));
+    document.getElementById('dialog').appendChild(create_element('div', '', 'simple_dialog text_dialog', 'clear_dialog()', 'non !'));
+}
 function remove_npc(id){
     clear_dialog();
     friendlist[id]=null;
-    new_position = find_random_spot(map, limit);
+    new_position = find_random_spot(map, limit, player_position);
     map[new_position[0]][new_position[1]] = id;
     npc_position = find_npc(map);
     document.getElementById('dialog').appendChild(create_element('div', '', 'simple_dialog text_dialog', '', 'très bien, je m\'en vais !'));
@@ -325,6 +331,8 @@ function pnj_one(value) {
         friendlist[1] = '1';
         draw_friendList(friendlist);
         map[npc_position[1][0]][npc_position[1][1]] = 'v';
+        draw_view(map, player_position[0], player_position[1], 10, 10, limit, "map");
+        draw_player(player_position);
     } else {
         document.getElementById('dialog').appendChild(create_element('div', '', 'simple_dialog text_dialog', '', 'dommage !'));
     }
@@ -337,20 +345,26 @@ function pnj_two(value) {
         friendlist[2] = '2';
         draw_friendList(friendlist);
         map[npc_position[2][0]][npc_position[2][1]] = 'v';
+        draw_view(map, player_position[0], player_position[1], 10, 10, limit, "map");
+        draw_player(player_position);
     } else {
         document.getElementById('dialog').appendChild(create_element('div', '', 'simple_dialog text_dialog', '', 'haha ! dommage pour toi, aller salut ! et je te prend le pnj1'));
         if(friendlist[1] == "1"){
             friendlist[1] = null;
             draw_friendList(friendlist);
             map[npc_position[2][0]][npc_position[2][1]] = 'v';
-            new_position = find_random_spot(map, limit);
+            new_position = find_random_spot(map, limit, player_position);
             map[new_position[0]][new_position[1]] = '7';
             npc_position = find_npc(map);
+            draw_view(map, player_position[0], player_position[1], 10, 10, limit, "map");
+            draw_player(player_position);
         }else{
             map[npc_position[2][0]][npc_position[2][1]] = 'v';
-            new_position = find_random_spot(map, limit);
+            new_position = find_random_spot(map, limit, player_position);
             map[new_position[0]][new_position[1]] = '2';
             npc_position = find_npc(map);
+            draw_view(map, player_position[0], player_position[1], 10, 10, limit, "map");
+            draw_player(player_position);
         }
 
     }
@@ -380,7 +394,7 @@ function pnj_four(value) {
         document.getElementById('dialog').appendChild(create_element('div', '', 'simple_dialog', '', 'tu y est presque, la sortie se trouve au sud, ha !fait attention au pnj 5, il m\'a déja trahie...'));
     } else {
         map[npc_position[4][0]][npc_position[4][1]] = 'v';
-        new_position = find_random_spot(map, limit);
+        new_position = find_random_spot(map, limit, player_position);
         map[new_position[0]][new_position[1]] = '4';
         npc_position = find_npc(map);
         document.getElementById('dialog').appendChild(create_element('div', '', 'simple_dialog', '', 'dommage !'));
@@ -391,13 +405,13 @@ function pnj_five(value) {
     clear_dialog();
     ready = true;
     if (value) {
-        friendlist[4] = '4';
+        friendlist[5] = '5';
         draw_friendList(friendlist);
         map[npc_position[5][0]][npc_position[5][1]] = 'v';
         document.getElementById('dialog').appendChild(create_element('div', '', 'simple_dialog', '', 'tu y est presque, la sortie se trouve au nord'));
     } else {
         map[npc_position[5][0]][npc_position[5][1]] = 'v';
-        new_position = find_random_spot(map, limit);
+        new_position = find_random_spot(map, limit, player_position);
         map[new_position[0]][new_position[1]] = '5';
         npc_position = find_npc(map);
         document.getElementById('dialog').appendChild(create_element('div', '', 'simple_dialog', '', 'dommage !'));
@@ -425,19 +439,19 @@ function draw_friendList(friendlist) {
     remove_class('friend');
     for (var i in friendlist) {
         if (friendlist[i] != null) {
-            document.getElementById('friendlist').appendChild(create_element('div', '', 'friend', 'remove_npc("'+i+'")', friendlist[i]));
+            document.getElementById('friendlist').appendChild(create_element('div', '', 'friend', 'remove_npc_dialog("'+i+'")', friendlist[i]));
         }
     }
 }
 
-function find_random_spot(map, limit) {
+function find_random_spot(map, limit, player_position) {
     var isfree = false;
     var x = 0;
     var y = 0;
     while (!isfree) {
         x = Math.floor(Math.random() * (+limit[1] - +limit[0])) + +limit[0];
         y = Math.floor(Math.random() * (+limit[3] - +limit[2])) + +limit[2];
-        if (map[x][y] == 'v') {
+        if (map[x][y] == 'v' && x != player_position[0] && y != player_position[1]) {
             isfree = true;
         }
     }
