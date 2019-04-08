@@ -244,7 +244,15 @@ function draw_view(map, x, y, height, width, limit, id) {
         i++;
     }
 }
-
+function remove_npc(id){
+    clear_dialog();
+    friendlist[id]=null;
+    new_position = find_random_spot(map, limit);
+    map[new_position[0]][new_position[1]] = id;
+    npc_position = find_npc(map);
+    document.getElementById('dialog').appendChild(create_element('div', '', 'simple_dialog text_dialog', '', 'très bien, je m\'en vais !'));
+    draw_friendList(friendlist);
+}
 
 function pnj_one_dialog(id) {
     clear_dialog();
@@ -417,7 +425,7 @@ function draw_friendList(friendlist) {
     remove_class('friend');
     for (var i in friendlist) {
         if (friendlist[i] != null) {
-            document.getElementById('friendlist').appendChild(create_element('div', '', 'friend', '', friendlist[i]));
+            document.getElementById('friendlist').appendChild(create_element('div', '', 'friend', 'remove_npc("'+i+'")', friendlist[i]));
         }
     }
 }
