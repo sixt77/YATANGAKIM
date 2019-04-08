@@ -351,6 +351,7 @@ function draw_friendList(friendlist) {
 }
 
 function  find_random_spot(map, limit) {
+    console.log("a");
     var isfree = false;
     var x = 0;
     var y = 0;
