@@ -273,6 +273,8 @@ function remove_npc(id){
     npc_position = find_npc(map);
     document.getElementById('dialog').appendChild(create_element('div', '', 'simple_dialog text_dialog', '', 'très bien, je m\'en vais !'));
     draw_friendList(friendlist);
+    draw_view(map, player_position[0], player_position[1], 10, 10, limit, "map");
+    draw_player(player_position);
 }
 
 function pnj_one_dialog(id) {
@@ -504,7 +506,7 @@ function  pnj_height(friendlist, inventory) {
         if(friendlist[6] != null){
             karma = karma +1;
         }
-        if(karma > 0){
+        if(karma >= 0){
             location.reload();
         }else{
             clear_dialog();
