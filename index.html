@@ -19,6 +19,7 @@
             map = init_map();
             npc_position = find_npc(map);
             friendlist = [];
+            inventory = [];
             build_map('map', map, limit);
             ready = true;
         });
@@ -60,7 +61,7 @@
 </header>
 
 <div class="scrolling">
-
+    <div id="pnj_name"></div>
     <div class="container_dialog">
         <div id="dialog" class="dialog">
             <h2>Dialogue :</h2>
@@ -72,7 +73,7 @@
             <h2>Liste d'amis :</h2>
         </div>
     </div>
-
+    <div id="inventory"></div>
 </div>
 
 <footer>
