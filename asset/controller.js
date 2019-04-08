@@ -56,7 +56,7 @@ function set_html_value($id, $value) {
 function init_map() {
     var map = [
         ["x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x"],
-        ["x", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "x"],
+        ["x", "v", "v", "v", "v", "3", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "x"],
         ["x", "v", "1", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "x"],
         ["x", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "x"],
         ["x", "v", "2", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "x"],
@@ -75,7 +75,7 @@ function init_map() {
         ["x", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "x"],
         ["x", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "x"],
         ["x", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "x"],
-        ["x", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "x"],
+        ["x", "v", "v", "v", "5", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "4", "v", "v", "v", "v", "v", "x"],
         ["x", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "x"],
         ["x", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "x"],
         ["x", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "v", "x"],
@@ -148,12 +148,18 @@ function check_case(player_position, x, y, limit, map) {
                 return player_position;
                 break;
             case '4':
-                pnj_three_dialog('dialog');
+                pnj_four_dialog('dialog');
                 player_position[2] = false;
                 return player_position;
                 break;
             case '5':
-                pnj_three_dialog('dialog');
+                pnj_five_dialog('dialog');
+                player_position[2] = false;
+                return player_position;
+                break;
+
+            case '7':
+                pnj_seven_dialog('dialog');
                 player_position[2] = false;
                 return player_position;
                 break;
@@ -276,6 +282,33 @@ function pnj_three_dialog2(id) {
     document.getElementById(id).appendChild(create_element('div', '', 'simple_dialog button button_right', "pnj_three(false);", 'donner sa langue au chat !'));
 }
 
+function pnj_four_dialog(id) {
+    clear_dialog();
+    document.getElementById(id).appendChild(create_element('div', '', 'simple_dialog text_dialog', '', 'tu veux devenir mon amis ?'));
+    document.getElementById(id).appendChild(create_element('div', '', 'simple_dialog button button_left', 'pnj_four(true)', 'oui ! '));
+    document.getElementById(id).appendChild(create_element('div', '', 'simple_dialog button button_right', "pnj_four(false);", 'pas question !'));
+}
+
+function pnj_five_dialog(id) {
+    clear_dialog();
+    document.getElementById(id).appendChild(create_element('div', '', 'simple_dialog text_dialog', '', 'tu veux devenir mon amis ?'));
+    document.getElementById(id).appendChild(create_element('div', '', 'simple_dialog button button_left', 'pnj_five_dialog2("dialog")', 'oui ! '));
+    document.getElementById(id).appendChild(create_element('div', '', 'simple_dialog button button_right', "pnj_five(false);", 'pas question !'));
+}
+
+function pnj_five_dialog2(id) {
+    clear_dialog();
+    document.getElementById(id).appendChild(create_element('div', '', 'simple_dialog text_dialog', '', 'tu en es sur, je n\'ai pas beaucoup d\'amis...'));
+    document.getElementById(id).appendChild(create_element('div', '', 'simple_dialog button button_left', 'pnj_five(true)', 'oui ! '));
+    document.getElementById(id).appendChild(create_element('div', '', 'simple_dialog button button_right', "pnj_five(false);", 'pas question !'));
+}
+
+function pnj_seven_dialog(id) {
+    clear_dialog();
+    document.getElementById(id).appendChild(create_element('div', '', 'simple_dialog text_dialog', '', 'tu nous as retrouver ? je te laisse une chance de nous reprendre'));
+    document.getElementById(id).appendChild(create_element('div', '', 'simple_dialog button button_left', 'pnj_seven(true)', 'oui ! '));
+    document.getElementById(id).appendChild(create_element('div', '', 'simple_dialog button button_right', "pnj_seven(false);", 'pas question !'));
+}
 
 function pnj_one(value) {
     clear_dialog();
@@ -285,7 +318,7 @@ function pnj_one(value) {
         draw_friendList(friendlist);
         map[npc_position[1][0]][npc_position[1][1]] = 'v';
     } else {
-        document.getElementById('dialog').appendChild(create_element('div', '', 'simple_dialog', '', 'dommage !'));
+        document.getElementById('dialog').appendChild(create_element('div', '', 'simple_dialog text_dialog', '', 'dommage !'));
     }
 }
 
@@ -297,14 +330,21 @@ function pnj_two(value) {
         draw_friendList(friendlist);
         map[npc_position[2][0]][npc_position[2][1]] = 'v';
     } else {
-        document.getElementById('dialog').appendChild(create_element('div', '', 'simple_dialog', '', 'haha ! dommage pour toi, aller salut !'));
-        friendlist[1] = null;
-        draw_friendList(friendlist);
-        map[npc_position[2][0]][npc_position[2][1]] = 'v';
-        new_position = find_random_spot(map, limit);
-        console.log("new pos : " + new_position);
-        map[new_position[0]][new_position[1]] = '7';
-        npc_position = find_npc(map);
+        document.getElementById('dialog').appendChild(create_element('div', '', 'simple_dialog text_dialog', '', 'haha ! dommage pour toi, aller salut ! et je te prend le pnj1'));
+        if(friendlist[1] == "1"){
+            friendlist[1] = null;
+            draw_friendList(friendlist);
+            map[npc_position[2][0]][npc_position[2][1]] = 'v';
+            new_position = find_random_spot(map, limit);
+            map[new_position[0]][new_position[1]] = '7';
+            npc_position = find_npc(map);
+        }else{
+            map[npc_position[2][0]][npc_position[2][1]] = 'v';
+            new_position = find_random_spot(map, limit);
+            map[new_position[0]][new_position[1]] = '2';
+            npc_position = find_npc(map);
+        }
+
     }
 }
 
@@ -317,8 +357,55 @@ function pnj_three(value) {
         draw_friendList(friendlist);
         map[npc_position[3][0]][npc_position[3][1]] = 'v';
     } else {
-        document.getElementById('dialog').appendChild(create_element('div', '', 'simple_dialog', '', 'perdu !'));
+        document.getElementById('dialog').appendChild(create_element('div', '', 'simple_dialog text_dialog', '', 'perdu !'));
         draw_friendList(friendlist);
+    }
+}
+
+function pnj_four(value) {
+    clear_dialog();
+    ready = true;
+    if (value) {
+        friendlist[4] = '4';
+        draw_friendList(friendlist);
+        map[npc_position[4][0]][npc_position[4][1]] = 'v';
+        document.getElementById('dialog').appendChild(create_element('div', '', 'simple_dialog', '', 'tu y est presque, la sortie se trouve au sud, ha !fait attention au pnj 5, il m\'a déja trahie...'));
+    } else {
+        map[npc_position[4][0]][npc_position[4][1]] = 'v';
+        new_position = find_random_spot(map, limit);
+        map[new_position[0]][new_position[1]] = '4';
+        npc_position = find_npc(map);
+        document.getElementById('dialog').appendChild(create_element('div', '', 'simple_dialog', '', 'dommage !'));
+    }
+}
+
+function pnj_five(value) {
+    clear_dialog();
+    ready = true;
+    if (value) {
+        friendlist[4] = '4';
+        draw_friendList(friendlist);
+        map[npc_position[5][0]][npc_position[5][1]] = 'v';
+        document.getElementById('dialog').appendChild(create_element('div', '', 'simple_dialog', '', 'tu y est presque, la sortie se trouve au nord'));
+    } else {
+        map[npc_position[5][0]][npc_position[5][1]] = 'v';
+        new_position = find_random_spot(map, limit);
+        map[new_position[0]][new_position[1]] = '5';
+        npc_position = find_npc(map);
+        document.getElementById('dialog').appendChild(create_element('div', '', 'simple_dialog', '', 'dommage !'));
+    }
+}
+
+function pnj_seven(value) {
+    clear_dialog();
+    ready = true;
+    if (value) {
+        friendlist[1] = '1';
+        friendlist[2] = '2';
+        draw_friendList(friendlist);
+        map[npc_position[7][0]][npc_position[7][1]] = 'v';
+    } else {
+        document.getElementById('dialog').appendChild(create_element('div', '', 'simple_dialog text_dialog', '', 'dommage !'));
     }
 }
 
